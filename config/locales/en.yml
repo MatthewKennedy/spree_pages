@@ -1,0 +1,8 @@
+---
+en:
+  activerecord:
+    attributes:
+  spree:
+    admin:
+      tab:
+        pages: Pages
