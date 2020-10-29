@@ -2,6 +2,8 @@ class Spree::Page < Spree::Base
   extend FriendlyId
   friendly_id :slug, use: [:slugged, :finders]
 
+  has_and_belongs_to_many :stores
+
   before_save :create_slug
 
   validates :title, presence: true
@@ -14,6 +16,7 @@ class Spree::Page < Spree::Base
   end
 
   scope :visible, -> { where visible: true }
+  scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
 
   def page_content
     if Spree::Config[:blogs_use_action_text]

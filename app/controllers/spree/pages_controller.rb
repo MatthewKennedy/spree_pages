@@ -3,7 +3,7 @@
 class Spree::PagesController < Spree::StoreController
   def show
 
-    @page = Spree::Page.friendly.find(params[:id])
+    @page = Spree::Page.visible.by_store(current_store).friendly.find(params[:id])
 
     @title = @page.page_seo_title
 

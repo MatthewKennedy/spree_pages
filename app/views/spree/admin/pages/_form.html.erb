@@ -65,14 +65,31 @@
 
   </div>
  <div class="col-4">
-   <br>
-   <%= form.field_container :visible do %>
-     <div class="custom-control custom-checkbox">
-       <%= form.check_box :visible, class: 'custom-control-input' %>
-       <%= form.label :visible, Spree.t(:visible), class: 'custom-control-label' %>
-       <%= form.error_message_on :visible %>
+   <div class="row">
+     <div class="col-12">
+      <h5>Visability</h5>
+       <%= form.field_container :visible do %>
+         <div class="custom-control custom-checkbox">
+           <%= form.check_box :visible, class: 'custom-control-input' %>
+           <%= form.label :visible, Spree.t(:visible), class: 'custom-control-label' %>
+           <%= form.error_message_on :visible %>
+         </div>
+       <% end %>
      </div>
-   <% end %>
+    </div>
+    <div class="row">
+      <div class="col-12">
+       <h5>Stores</h5>
+       <%= form.field_container :stores do %>
+           <% Spree::Store.all.each do |store| %>
+              <div class="custom-control custom-checkbox">
+                <%= check_box_tag 'page[store_ids][]', store.id, @page.stores.include?(store), { class: 'custom-control-input', id: "page_store_id_#{store.id}" } %>
+                <%= form.label 'store.id', "#{store.name} (#{store.code})", class: 'custom-control-label', for: "page_store_id_#{store.id}" %>
+              </div>
+           <% end %>
+        <% end %>
+      </div>
+    </div>
  </div>
 </div>
 
