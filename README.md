@@ -1,6 +1,6 @@
 # Spree Pages
 
-Simple, easy to use Shopify like pages for Spree 4.2 and up.
+Simple, easy to use Shopify style pages for Spree 4.2 and up.
 
 ## Installation
 
@@ -48,4 +48,4 @@ If you'd like to contribute, please take a look at the
 [instructions](CONTRIBUTING.md) for installing dependencies and crafting a good
 pull request.
 
-Copyright (c) 2020 [name of extension creator], released under the New BSD License
+Copyright (c) 2020 Matthew Kennedy, released under the New BSD License
