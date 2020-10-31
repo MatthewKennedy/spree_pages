@@ -3,6 +3,10 @@ en:
   activerecord:
     attributes:
   spree:
+    spree_pages:
+      draft_mode: You are viewing this page in draft mode.
+      preview_in_store: Preview in store
+      view_in_store: View in store
     admin:
       tab:
         pages: Pages

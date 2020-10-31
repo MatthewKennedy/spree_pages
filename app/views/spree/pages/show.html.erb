@@ -10,3 +10,13 @@
     </div>
   </div>
 </div>
+
+<% unless @page.visible? %>
+  <div class="fixed-bottom text-center border">
+    <div class="row">
+      <div id="draftNotice" class="col-12 d-flex w-100 p-4 justify-content-center align-items-center bg-dark">
+        <span class="text-white"><%= Spree.t('spree_pages.draft_mode') %></span>
+      </div>
+    </div>
+  </div>
+<% end %>

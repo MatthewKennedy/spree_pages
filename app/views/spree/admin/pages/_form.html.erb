@@ -19,7 +19,7 @@
         <%= form.field_container :content do %>
           <div class="form-group">
             <%= form.label :content, Spree.t(:content) %> <span class="text-danger">*</span>
-            <%= form.text_area :content, { rows: 10, class: 'form-control', required: true} %>
+            <%= form.text_area :content, { rows: 10, class: 'form-control'} %>
             <%= form.error_message_on :content %>
           </div>
         <% end %>
@@ -65,32 +65,29 @@
 
   </div>
  <div class="col-4">
-
    <div class="row">
      <div class="col-12">
       <h5>Visability</h5>
-      <%= form.field_container :visible do %>
-        <div class='custom-control custom-checkbox'>
-          <%= form.check_box :visible, class: 'custom-control-input' %>
-          <%= form.label :visible, Spree.t(:visible), class: 'custom-control-label' %>
-          <%= form.error_message_on :visible %>
-        </div>
-      <% end %>
+       <%= form.field_container :visible do %>
+         <div class="custom-control custom-checkbox">
+           <%= form.check_box :visible, class: 'custom-control-input' %>
+           <%= form.label :visible, Spree.t(:visible), class: 'custom-control-label' %>
+           <%= form.error_message_on :visible %>
+         </div>
+       <% end %>
      </div>
     </div>
-
     <div class="row">
       <div class="col-12">
        <h5>Stores</h5>
         <%= collection_check_boxes(:page, :store_ids, Spree::Store.all, :id, :name) do |form| %>
-          <div class='custom-control custom-checkbox'>
-            <%= form.check_box(class: 'custom-control-input') %>
-            <%= form.label(class: 'custom-control-label') %>
+          <div class="custom-control custom-checkbox">
+            <%= form.check_box(class: "custom-control-input") %>
+            <%= form.label(class: "custom-control-label") %>
           </div>
         <% end %>
       </div>
     </div>
-
  </div>
 </div>
 

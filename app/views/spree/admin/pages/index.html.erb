@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th class="title"><%= Spree.t(:title) %></th>
+        <th class="status"><%= Spree.t(:status) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
@@ -19,13 +20,34 @@
       <% @pages.each do |page| %>
         <tr class="<%= cycle('odd', 'even') %>">
           <td class=""><%= page.title %></td>
+          <td class="">
+            <% if page.visible? %>
+              <%= Spree.t(:published) %>
+            <% else %>
+              <%= Spree.t(:draft) %>
+            <% end %>
+          </td>
           <td class="actions text-right no-wrap">
             <% unless page.stores.empty? %>
               <div class="dropdown d-inline-block">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton-<%= page.slug %>"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+
                   <%= svg_icon name: "view.svg", width: '16', height: '16' %>
                 </button>
-                <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu mt-2 p-0 mr-2 dropdown-menu-right" aria-labelledby="dropdownMenuButton-<%= page.slug %>">
+                  <div class="dropdown-item px-0 py-2 text-center bg-light">
+                    <% if page.visible? %>
+                      <%= Spree.t('spree_pages.view_in_store') %>
+                    <% else %>
+                      <%= Spree.t('spree_pages.preview_in_store') %>
+                    <% end %>
+                  </div>
+                  <div class="dropdown-divider m-0"></div>
                   <% page.stores.each do |store| %>
                     <%= view_in_store_link(page, store) %>
                   <% end %>

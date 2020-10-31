@@ -15,6 +15,7 @@ class Spree::Page < Spree::Base
     validates :content, presence: true
   end
 
+  default_scope { order('created_at DESC') }
   scope :visible, -> { where visible: true }
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
 
