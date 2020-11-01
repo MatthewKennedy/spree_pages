@@ -9,10 +9,5 @@ class Spree::PagesController < Spree::StoreController
     end
 
     @title = @page.page_seo_title
-
-    respond_to do |format|
-      format.html
-      format.rss { render layout: false }
-    end
   end
 end
