@@ -8,7 +8,7 @@ class Spree::Page < Spree::Base
 
   validates :title, presence: true
 
-  if Spree::Config[:blogs_use_action_text]
+  if Spree::Config[:pages_use_action_text]
     has_rich_text :action_text_content
     validates :action_text_content, presence: true
   else
@@ -20,7 +20,7 @@ class Spree::Page < Spree::Base
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
 
   def page_content
-    if Spree::Config[:blogs_use_action_text]
+    if Spree::Config[:pages_use_action_text]
       action_text_content
     else
       content
