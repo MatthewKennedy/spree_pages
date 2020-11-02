@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module SpreePages
   class Engine < Rails::Engine
-    require 'spree/core'
+    require "spree/core"
     isolate_namespace Spree
-    engine_name 'spree_pages'
+    engine_name "spree_pages"
 
-    initializer 'spree_pages.preferences', before: 'spree.environment' do
+    initializer "spree_pages.preferences", before: "spree.environment" do
       Spree::AppConfiguration.class_eval do
         preference :pages_use_action_text, :boolean, default: false
       end
@@ -16,7 +18,7 @@ module SpreePages
     end
 
     def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
+      Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Spree::Page < Spree::Base
   extend FriendlyId
   friendly_id :slug, use: [:slugged, :finders]
@@ -15,9 +17,9 @@ class Spree::Page < Spree::Base
     validates :content, presence: true
   end
 
-  default_scope { order('created_at DESC') }
+  default_scope { order("created_at DESC") }
   scope :visible, -> { where visible: true }
-  scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
+  scope :by_store, ->(store) { joins(:stores).where("spree_pages_stores.store_id = ?", store) }
 
   def page_content
     if Spree::Config[:pages_use_action_text]
@@ -36,12 +38,11 @@ class Spree::Page < Spree::Base
   end
 
   private
-
-  def create_slug
-    self.slug = if slug.blank?
-                  title.to_url
-                else
-                  slug.to_url
-                end
-  end
+    def create_slug
+      self.slug = if slug.blank?
+        title.to_url
+      else
+        slug.to_url
+      end
+    end
 end

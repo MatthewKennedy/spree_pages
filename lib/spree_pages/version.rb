@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SpreePages
   module_function
 
@@ -11,8 +13,8 @@ module SpreePages
     MAJOR = 0
     MINOR = 0
     TINY  = 1
-    PRE   = 'alpha'.freeze
+    PRE   = "alpha"
 
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
+    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
   end
 end
