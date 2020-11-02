@@ -5,7 +5,7 @@ class Spree::PagesController < Spree::StoreController
     if try_spree_current_user.try(:has_spree_role?, "admin")
       @page = Spree::Page.by_store(current_store).friendly.find(params[:id])
     else
-      @page = Spree::Page.visible.by_store(current_store).friendly.find(params[:id])
+      fresh_when @page = Spree::Page.visible.by_store(current_store).friendly.find(params[:id])
     end
 
     @title = @page.page_seo_title

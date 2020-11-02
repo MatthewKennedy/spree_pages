@@ -19,8 +19,8 @@
     <tbody>
       <% @pages.each do |page| %>
         <tr class="<%= cycle('odd', 'even') %>">
-          <td class=""><%= page.title %></td>
-          <td class="">
+          <td><%= page.title %></td>
+          <td>
             <% if page.visible? %>
               <%= Spree.t(:published) %>
             <% else %>
