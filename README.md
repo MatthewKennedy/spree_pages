@@ -7,7 +7,7 @@ Simple, easy to use Shopify style pages for Spree 4.2 and up with Action Text.
 1. Add this extension to your Gemfile with this line:
 
     ```ruby
-    gem 'spree_pages', github: 'matthewkennedy/spree_pages'
+    gem 'spree_pages', github: 'matthewkennedy/spree_pages', branch: 'main'
     ```
 
 2. Install the gem using Bundler
