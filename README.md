@@ -1,6 +1,6 @@
 # Spree Pages
 
-Simple, easy to use Shopify style pages for Spree 4.2 and up.
+Simple, easy to use Shopify style pages for Spree 4.2 and up with Action Text.
 
 ## Installation
 
@@ -25,6 +25,15 @@ Simple, easy to use Shopify style pages for Spree 4.2 and up.
 4. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
+
+## Using Action Text
+If you wish to use Rails 6 built in TRIX editor with Action Text for your pages set the following Spree config:
+
+```ruby
+    #In -> config/initializers/spree.rb
+    config.pages_use_action_text = true
+```
+And make sure you have Action Text Installed, see this guide to using Action Text with Spree if needed.
 
 ## Testing
 
