@@ -2,7 +2,17 @@
 en:
   activerecord:
     attributes:
+    models:
+      spree/page:
+        one: Page
+        other: Pages
   spree:
+    back_to_pages_list: Back To Pages List
+    edit_page: Edit Page
+    new_page: New Page
+    pages: Pages
+    page_details: Page Details
+    no_pages: No pages found.
     spree_pages:
       draft_mode: You are viewing this page in draft mode.
       preview_in_store: Preview in store
