@@ -38,7 +38,7 @@ If you wish to use a custom SVG icon in the admin UI, place your new icon in the
 
 ```ruby
     #In -> config/initializers/spree.rb
-    preference :pages_custom_page_icon, :string, default: "pages"
+    config.pages_custom_page_icon = "pages"
 ```
 
 
