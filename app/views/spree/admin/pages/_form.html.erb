@@ -84,7 +84,7 @@
     <div class="row">
       <div class="col-12">
        <h5>Stores</h5>
-        <%= collection_check_boxes(:page, :store_ids, Spree::Store.all, :id, :name) do |form| %>
+        <%= collection_check_boxes(:page, :store_ids, Spree::Store.all, :id, :unique_name) do |form| %>
           <div class="custom-control custom-checkbox">
             <%= form.check_box(class: "custom-control-input") %>
             <%= form.label(class: "custom-control-label") %>
