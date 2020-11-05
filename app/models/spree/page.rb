@@ -21,7 +21,7 @@ class Spree::Page < Spree::Base
   scope :visible, -> { where visible: true }
   scope :by_store, ->(store) { joins(:stores).where("spree_pages_stores.store_id = ?", store) }
 
-  def page_content
+  def body
     if Spree::Config[:pages_use_action_text]
       action_text_content
     else
@@ -29,7 +29,7 @@ class Spree::Page < Spree::Base
     end
   end
 
-  def page_seo_title
+  def seo_title
     if meta_title.present?
       meta_title
     else

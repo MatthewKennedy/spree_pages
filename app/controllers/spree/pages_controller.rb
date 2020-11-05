@@ -8,6 +8,6 @@ class Spree::PagesController < Spree::StoreController
       fresh_when @page = Spree::Page.visible.by_store(current_store).friendly.find(params[:id])
     end
 
-    @title = @page.page_seo_title
+    @title = @page.seo_title
   end
 end

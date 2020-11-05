@@ -23,15 +23,15 @@ describe Spree::Page, type: :model do
     end
   end
 
-  describe ".page_seo_title" do
+  describe ".seo_title" do
     it "returns the title if no meta_title is set" do
-      expect(page.page_seo_title).to eq "My Page Title"
+      expect(page.seo_title).to eq "My Page Title"
     end
 
     it "returns the meta_title if set" do
       page = create(:page, meta_title: "Hello From The Meta Title")
 
-      expect(page.page_seo_title).to eq "Hello From The Meta Title"
+      expect(page.seo_title).to eq "Hello From The Meta Title"
     end
   end
 end
