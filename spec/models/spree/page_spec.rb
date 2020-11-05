@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 describe Spree::Page, type: :model do
@@ -10,8 +12,14 @@ describe Spree::Page, type: :model do
   end
 
   describe ".slug" do
-    it "returns the title as a formatted slug" do
+    it "returns the title as a formatted slug if no slug is set" do
       expect(page.slug).to eq "my-page-title"
+    end
+
+    it "returns a formatted slug when a slug is set" do
+      page = create(:page, slug: "like a sluug")
+
+      expect(page.slug).to eq "like-a-sluug"
     end
   end
 
