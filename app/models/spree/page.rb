@@ -2,6 +2,7 @@
 
 class Spree::Page < Spree::Base
   extend FriendlyId
+
   friendly_id :slug, use: [:slugged, :finders]
 
   has_and_belongs_to_many :stores
@@ -10,16 +11,18 @@ class Spree::Page < Spree::Base
 
   validates :title, presence: true
 
+  default_scope { order("created_at DESC") }
+
+  scope :visible, -> { where visible: true }
+
+  scope :by_store, ->(store) { joins(:stores).where("store_id = ?", store) }
+
   if Spree::Config[:pages_use_action_text]
     has_rich_text :action_text_content
     validates :action_text_content, presence: true
   else
     validates :content, presence: true
   end
-
-  default_scope { order("created_at DESC") }
-  scope :visible, -> { where visible: true }
-  scope :by_store, ->(store) { joins(:stores).where("spree_pages_stores.store_id = ?", store) }
 
   def body
     if Spree::Config[:pages_use_action_text]
