@@ -22,8 +22,8 @@ en:
     no_pages: No pages found.
     spree_pages:
       draft_mode: You are viewing this page in draft mode.
-      preview_in_store: Preview in store
-      view_in_store: View in store
+      preview_page_in_store: Preview Page in store
+      view_page_in_store: View Page in store
     admin:
       tab:
         pages: Pages
