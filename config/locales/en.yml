@@ -2,6 +2,13 @@
 en:
   activerecord:
     attributes:
+      spree/page:
+        title: Title
+        content: Content
+        meta_title: Meta Title
+        meta_description: Meta Description
+        slug: Slug
+        visible: Visible
     models:
       spree/page:
         one: Page
