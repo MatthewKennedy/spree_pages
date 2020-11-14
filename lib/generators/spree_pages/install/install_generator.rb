@@ -12,7 +12,9 @@ module SpreePages
       end
 
       def add_files
-        template 'assets/images/backend-pages.svg', 'app/assets/images/backend-pages.svg'
+        if Spree::Core::Engine.backend_available? || Rails.env.test?
+          template 'assets/images/backend-pages.svg', 'app/assets/images/backend-pages.svg'
+        end
       end
 
       def add_migrations
