@@ -9,7 +9,6 @@ module SpreePages
     initializer "spree_pages.preferences", before: "spree.environment" do
       Spree::AppConfiguration.class_eval do
         preference :pages_use_action_text, :boolean, default: false
-        preference :pages_custom_icon, :string, default: "report.svg"
       end
     end
 

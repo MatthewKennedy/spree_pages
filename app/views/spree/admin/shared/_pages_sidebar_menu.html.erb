@@ -1,5 +1,5 @@
 <% if Spree.user_class && can?(:admin, Spree::Page) %>
   <ul class='nav nav-sidebar border-bottom'>
-    <%= tab Spree.t(:'admin.tab.pages'), url: spree.admin_pages_path, icon: Spree::Config[:pages_custom_icon] %>
+    <%= tab Spree.t(:'admin.tab.pages'), url: spree.admin_pages_path, icon: "pages.svg" %>
   </ul>
 <% end %>
