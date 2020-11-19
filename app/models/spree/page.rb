@@ -41,11 +41,12 @@ class Spree::Page < Spree::Base
   end
 
   private
-    def create_slug
-      self.slug = if slug.blank?
-        title.to_url
-      else
-        slug.to_url
-      end
+
+  def create_slug
+    self.slug = if slug.blank?
+      title.to_url
+    else
+      slug.to_url
     end
+  end
 end

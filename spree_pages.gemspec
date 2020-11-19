@@ -1,21 +1,19 @@
-# encoding: UTF-8
-
 lib = File.expand_path("../lib/", __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
 require "spree_pages/version"
 
 Gem::Specification.new do |s|
-  s.platform    = Gem::Platform::RUBY
-  s.name        = "spree_pages"
-  s.version     = SpreePages.version
-  s.summary     = "Pages exention for Spree 4.2"
+  s.platform = Gem::Platform::RUBY
+  s.name = "spree_pages"
+  s.version = SpreePages.version
+  s.summary = "Pages exention for Spree 4.2"
   s.description = "Shopify style Pages exention for Spree 4.2"
   s.required_ruby_version = ">= 2.2.7"
 
-  s.author    = "Matthew Kennedy"
-  s.email     = "m.kennedy@me.com"
-  s.homepage  = "https://github.com/MatthewKennedy/spree_pages"
+  s.author = "Matthew Kennedy"
+  s.email = "m.kennedy@me.com"
+  s.homepage = "https://github.com/MatthewKennedy/spree_pages"
   s.license = "BSD-3-Clause"
 
   s.files = `git ls-files`.split("\n").reject { |f| f.match(/^spec/) && !f.match(/^spec\/fixtures/) }

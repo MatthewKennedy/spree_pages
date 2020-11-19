@@ -4,6 +4,6 @@ Spree::Core::Engine.add_routes do
   end
 
   resources :pages, only: [:show] do
-    get '/:id' => 'posts#show', as: :post
+    get "/:id" => "posts#show", :as => :post
   end
 end
