@@ -1,6 +1,7 @@
-# Spree Pages
-![CI](https://github.com/MatthewKennedy/spree_pages/workflows/CI/badge.svg) ![Standard Rb](https://github.com/MatthewKennedy/spree_pages/workflows/Standard%20Rb/badge.svg)
+# spree_pages
 
+![CI](https://github.com/MatthewKennedy/spree_pages/workflows/CI/badge.svg)
+![Standard Rb](https://github.com/MatthewKennedy/spree_pages/workflows/Standard%20Rb/badge.svg)
 
 Simple, easy to use Shopify style pages for Spree 4.2 and up, with Action Text (TRIX rich text editor) ready via configs.
 
