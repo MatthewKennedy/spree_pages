@@ -6,10 +6,8 @@ module SpreePages
     isolate_namespace Spree
     engine_name "spree_pages"
 
-    initializer "spree_pages.preferences", before: "spree.environment" do
-      Spree::AppConfiguration.class_eval do
-        preference :pages_use_action_text, :boolean, default: false
-      end
+    initializer 'spree_pages.environment', before: :load_config_initializers do |_app|
+      SpreePages::Config = SpreePages::Configuration.new
     end
 
     # use rspec for tests

@@ -19,7 +19,7 @@
         <%= form.field_container :content do %>
           <div class="form-group">
             <%= form.label :content, Spree.t(:content) %> <span class="text-danger">*</span>
-            <% if Spree::Config[:pages_use_action_text] %>
+            <% if SpreePages::Config[:use_action_text] %>
               <%= form.rich_text_area :action_text_content %>
             <% else %>
               <%= form.text_area :content, { required: true, rows: 15, class: 'form-control'} %>

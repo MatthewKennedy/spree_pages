@@ -34,7 +34,7 @@ If you wish to use Rails 6 built in TRIX rich text editor with Action Text for y
 
 ```ruby
     #In -> config/initializers/spree.rb
-    config.pages_use_action_text = true
+    SpreePages::Config.use_action_text = true
 ```
 
 ## Testing
