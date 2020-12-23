@@ -6,7 +6,7 @@ module SpreePages
     isolate_namespace Spree
     engine_name "spree_pages"
 
-    initializer 'spree_pages.environment', before: :load_config_initializers do |_app|
+    initializer "spree_pages.environment", before: :load_config_initializers do |_app|
       SpreePages::Config = SpreePages::Configuration.new
     end
 
