@@ -38,7 +38,7 @@ If you wish to use Rails 6 built in TRIX rich text editor with Action Text for y
     SpreePages::Config.use_action_text = true
 ```
 
-If you are not using Action text buy wish to use raw HTML in your pages you can use the following config
+If you are not using Action Text but wish to use raw HTML in your pages you can use the following config:
 
 ```ruby
     #In -> config/initializers/spree.rb
