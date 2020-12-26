@@ -6,7 +6,11 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <%= @page.body %>
+      <% if SpreePages::Config.use_raw_body_text && !SpreePages::Config.use_action_text %>
+        <%= raw @page.body %>
+      <% else %>
+        <%= @page.body %>
+      <% end %>
     </div>
   </div>
 </div>
