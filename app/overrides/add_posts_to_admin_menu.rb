@@ -5,5 +5,5 @@ Deface::Override.new(
   name: "add_pages_link_to_admin_sidebar_menu",
   insert_before: "ul#sidebarConfiguration",
   partial: "spree/admin/shared/pages_sidebar_menu",
-  disabled: false
+  disabled: defined?(SpreeBlogs)
 )
