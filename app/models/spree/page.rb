@@ -3,7 +3,7 @@
 class Spree::Page < Spree::Base
   extend FriendlyId
 
-  friendly_id :slug, use: [:slugged, :finders]
+  friendly_id :slug, use: [:slugged, :finders, :history]
 
   has_and_belongs_to_many :stores
 
