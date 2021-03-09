@@ -1,8 +1,9 @@
-# Get Action Text Working In Spree
+# Using Action Text With Spree
 
-Setting up AxtionText and TRIX to work with spree requires a few extra steps:
+Setting up Action Text and TRIX to work with Spree requires a few extra steps:
 
-1. First, be sure you have ActionText ready in your rails app by running the installs: `rails action_text:install` and `rails active_storage:install`, and all the migrations have been run.
+1. First, be sure you have Action Text ready in your rails app by running the installs: `rails action_text:install` and
+ `rails active_storage:install`, and all the migrations have been run.
 
 2. In: `vendor/assets/stylesheets/spree/backend/all.css` & `vendor/assets/stylesheets/spree/frontend/all.css` add the line `//= require actiontext`
 at the very top of the style sheets, it should look somthing like this:
