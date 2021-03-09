@@ -31,7 +31,8 @@ Simple, easy to use Shopify style pages for Spree 4.2 and up, with Action Text (
 
 ## Configurations
 
-If you wish to use Rails 6 built in TRIX rich text editor with Action Text for your pages set the following Spree config, and make sure you have Action Text installed. See this guide to using Action Text with Spree if needed.
+If you wish to use Rails 6 built in TRIX rich text editor with Action Text for your pages set the following Spree config, and make sure you have Action Text installed.
+See this guide to [Using Action Text with Spree](https://github.com/MatthewKennedy/spree_pages/blob/main/spree_actiontext.md)  if needed.
 
 ```ruby
     #In -> config/initializers/spree.rb
