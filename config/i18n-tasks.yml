@@ -1,0 +1,28 @@
+---
+base_locale: en
+data:
+  read:
+
+  write:
+
+  external:
+
+  yaml:
+    write:
+      # do not wrap lines at 80 characters
+      line_width: -1
+
+search:
+  paths:
+    - app/
+
+  exclude:
+    - app/assets/images
+    - app/assets/fonts
+    - app/assets/videos
+
+ignore_unused:
+  # To Sort
+  - 'activerecord.*'
+
+<% I18n::Tasks.add_scanner 'I18n::Tasks::Scanners::PatternMapper', patterns: [['\bSpree\.t[( ]\s*%{key}', 'spree.%{key}']] %>

@@ -3,27 +3,38 @@ en:
   activerecord:
     attributes:
       spree/page:
-        title: Title
         content: Content
-        meta_title: Meta Title
         meta_description: Meta Description
+        meta_title: Meta Title
         slug: Slug
+        title: Title
         visible: Visible
     models:
       spree/page:
         one: Page
         other: Pages
   spree:
+    add_one: Add one
+    admin:
+      tab:
+        pages: Pages
     back_to_pages_list: Back To Pages List
+    content: Content
+    draft: Draft
     edit_page: Edit Page
+    meta_description: Meta description
+    meta_title: Meta title
     new_page: New Page
-    pages: Pages
+    no_resource_found: No resource found
     page_details: Page Details
-    no_pages: No pages found.
+    pages: Pages
+    published: Published
+    seo: SEO
+    slug: Slug
     spree_pages:
       draft_mode: You are viewing this page in draft mode.
       preview_page_in_store: Preview Page in store
       view_page_in_store: View Page in store
-    admin:
-      tab:
-        pages: Pages
+    status: Status
+    title: Title
+    visible: Visible
