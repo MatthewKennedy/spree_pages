@@ -66,7 +66,7 @@
 
 <% else %>
   <div class="no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/page')) %>,
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Page)) %>,
     <%= link_to(Spree.t(:add_one), spree.new_admin_page_path) %>!
   </div>
 <% end %>
