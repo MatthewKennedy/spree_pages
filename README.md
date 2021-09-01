@@ -1,3 +1,7 @@
+⚠️ Deprecation Notice ⚠️
+
+Since Spree 4.3 this extension is deprecated and not needed. Spree 4.3 includes a built-in CMS system that surpasses this extension.
+
 # spree_pages
 
 ![CI](https://github.com/MatthewKennedy/spree_pages/workflows/CI/badge.svg)
